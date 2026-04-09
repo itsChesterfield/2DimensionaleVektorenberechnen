@@ -23,7 +23,7 @@ public class Vektor {
 	/**
 	 * winkel entspricht in welche Richtung der Vektor geht.
 	 */
-	private double winkel;
+	private Winkel winkel;
 	/**
 	 * NULLPUNKT entspricht den Konstanten Ursprung.
 	 */
@@ -41,12 +41,12 @@ public class Vektor {
 		this.x = x;
 		this.y = y;
 	}
-	public Vektor(int x, int y, double winkel)throws IllegalArgumentException{
+	public Vektor(int x, int y, double winkelGrad)throws IllegalArgumentException{
 		this(x, y);
 		if(){
 
 		}
 		laenge = Math.sqrt(x * x + y * y);
-
+		this.winkel = new Winkel(winkelGrad);
 	}
 }
