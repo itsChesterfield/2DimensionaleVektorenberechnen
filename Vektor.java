@@ -1,5 +1,6 @@
-
 package mathematik;
+
+import trigonometrie.Winkel;
 
 /**
  * Repräsentiert einen 2 Dimensionalen Vektor.
@@ -46,5 +47,6 @@ public class Vektor {
 
 		}
 		laenge = Math.sqrt(x * x + y * y);
+
 	}
 }
