@@ -17,9 +17,9 @@ public class Vektor {
 	 */
 	private double y;
 	/**
-	 * laenge entspricht wie lang ein Vektor ist.
+	 * betrag entspricht wie lang ein Vektor ist.
 	 */
-	private double laenge;
+	private double betrag;
 	/**
 	 * winkel entspricht in welche Richtung der Vektor geht.
 	 */
@@ -45,14 +45,59 @@ public class Vektor {
 
 	/**
 	 * Überladener Konstruktor die Länge des Vektors entgegen nimmt, x und y berechnet und ein neues Winkel Objekt erstellt.
-	 * @param laenge
+	 * @param betrag
 	 * @param winkelGrad
 	 * @param winkelGrad angegebener Grad wie der Winkel sein soll.
 	 */
-	public Vektor(double laenge ,double winkelGrad){
-		this.x = laenge * Math.cos(winkel.getWinkelImBogenmass());
-		this.y = laenge * Math.sin(winkel.getWinkelImBogenmass());
-		this.laenge = laenge;
+	public Vektor(double betrag ,double winkelGrad){
+		this.x = betrag * Math.cos(winkel.getWinkelImBogenmass());
+		this.y = betrag * Math.sin(winkel.getWinkelImBogenmass());
+		this.betrag = betrag;
 		this.winkel = new Winkel(winkelGrad);
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
+
+	public void setBetrag(double betrag) {
+		this.betrag = betrag;
+	}
+
+	public void setWinkel(Winkel winkel) {
+		this.winkel = winkel;
+	}
+
+	public double getX(){
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public double getBetrag() {
+		return betrag;
+	}
+
+	public Winkel getWinkel() {
+		return winkel;
+	}
+
+	public Vektor addieren(Vektor v){
+		Vektor vektor2 = new Vektor(this.x + v.x, this.y + v.y);
+		vektor2.setBetrag(Math.sqrt(vektor2.x * vektor2.x + vektor2.y * vektor2.y));
+		vektor2.setWinkel(winkel.addieren(v.winkel));
+		return vektor2;
+	}
+	public double skalarprodukt(Vektor v){
+		return (this.x * v.x) + (this.y * v.y);
+	}
+	public Vektor orhogonalerEinheitsvektor(){
+
 	}
 }
