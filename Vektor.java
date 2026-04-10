@@ -114,6 +114,6 @@ public class Vektor {
 		return orthogonal;
 	}
 	public String toString(){
-		return "x: " + this.x + "\n y: " + y + "\n Betrag: " + this.betrag + "\n Winkel: " + this.winkel;
+		return "/////////////////////" + "\n x: " + this.x + "\n y: " + y + "\n Betrag: " + this.betrag + "\n Winkel: " + this.winkel;
 	}
 }
