@@ -42,6 +42,8 @@ public class Vektor {
 		// Ich sollte hier den anderen Konstruktor aufrufen und länge sowie Winkel berechnen. Damit ich nur einen Konstruktor immer aufrufen muss für alle vier Werte.
 		this.x = x;
 		this.y = y;
+		setBetrag(Math.sqrt(x * x + y * y));
+		setWinkel(Math.toDegrees(Math.atan2(y, x)));
 	}
 
 	/**
