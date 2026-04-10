@@ -98,6 +98,18 @@ public class Vektor {
 		return (this.x * v.x) + (this.y * v.y);
 	}
 	public Vektor orhogonalerEinheitsvektor(){
+		double x_orthogonal = this.y / this.betrag;
+		double y_orthogonal = -(this.x / this.betrag);
 
+		Vektor orthogonal = new Vektor(x_orthogonal, y_orthogonal);
+		orthogonal.setBetrag(Math.sqrt(x_orthogonal * x_orthogonal + y_orthogonal * y_orthogonal));
+
+		Winkel orthogonalWinkel = new Winkel(Math.toDegrees(Math.atan2(y_orthogonal, x_orthogonal)));
+		orthogonal.setWinkel(orthogonalWinkel);
+
+		return orthogonal;
+	}
+	public String toString(){
+		return "x: " + this.x + "\n y: " + y + "\n Betrag: " + this.betrag + "\n Winkel: " + this.winkel;
 	}
 }
