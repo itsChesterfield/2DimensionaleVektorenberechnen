@@ -39,6 +39,7 @@ public class Vektor {
 		if(x == 0 && y == 0){
 			throw new IllegalArgumentException("x und y dürfen nicht beide 0 sein!");
 		}
+		// Ich sollte hier den anderen Konstruktor aufrufen und länge sowie Winkel berechnen. Damit ich nur einen Konstruktor immer aufrufen muss für alle vier Werte.
 		this.x = x;
 		this.y = y;
 	}
