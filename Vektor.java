@@ -35,7 +35,7 @@ public class Vektor {
 	 * @param y
 	 * @throws IllegalArgumentException damit x und y um zu verhindern das beide mit 0 belegt werden.
 	 */
-	public Vektor(int x, int y)throws IllegalArgumentException{
+	public Vektor(double x, int y)throws IllegalArgumentException{ // Hier muss ich mir einen anderen Weg ausdenken.
 		if(x == 0 && y == 0){
 			throw new IllegalArgumentException("x und y dürfen nicht beide 0 sein!");
 		}
@@ -101,7 +101,7 @@ public class Vektor {
 	public double skalarprodukt(Vektor v){
 		return (this.x * v.x) + (this.y * v.y);
 	}
-	public Vektor orhogonalerEinheitsvektor(){
+	public Vektor orthogonalerEinheitsvektor(){
 		double x_orthogonal = this.y / this.betrag;
 		double y_orthogonal = -(this.x / this.betrag);
 
