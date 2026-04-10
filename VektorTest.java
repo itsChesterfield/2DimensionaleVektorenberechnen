@@ -1,17 +1,18 @@
 package mathematik;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 public class VektorTest {
 	public static Vektor vik;
 	@BeforeEach
 	public void objektErstellen(){
-		vik.setWinkel(321.2)
+		vik.setY(21.23);
+		vik.setX(43.83);
+		vik.setWinkel(321.2);
+		vik.setBetrag(45.1);
 	}
 	@Test
-	public String toString(){
-		Vektor vik2 = vik;
-		System.out.println(vik2.toString());
-		return null;
+	public void ausgabe(){
+		System.out.println(vik.toString());
 	}
 }
