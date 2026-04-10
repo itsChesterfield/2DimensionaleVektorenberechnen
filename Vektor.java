@@ -50,10 +50,10 @@ public class Vektor {
 	 * @param winkelGrad angegebener Grad wie der Winkel sein soll.
 	 */
 	public Vektor(double betrag ,double winkelGrad){
+		this.winkel = new Winkel(winkelGrad);
 		this.x = betrag * Math.cos(winkel.getWinkelImBogenmass());
 		this.y = betrag * Math.sin(winkel.getWinkelImBogenmass());
 		this.betrag = betrag;
-		this.winkel = new Winkel(winkelGrad);
 	}
 
 	public void setX(double x) {
