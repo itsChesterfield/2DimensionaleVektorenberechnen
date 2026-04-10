@@ -68,7 +68,10 @@ public class Vektor {
 		this.betrag = betrag;
 	}
 
-	public void setWinkel(Winkel winkel) {
+	public void setWinkel(double winkelInGrad) {
+		this.winkel = new Winkel(winkelInGrad);
+	}
+	public void setWinkel(Winkel winkle) { // Hier muss ich nochmal kontrollieren, ob es ein guter Programmierstil ist.
 		this.winkel = winkel;
 	}
 
@@ -91,9 +94,10 @@ public class Vektor {
 	public Vektor addieren(Vektor v){
 		Vektor vektor2 = new Vektor(this.x + v.x, this.y + v.y);
 		vektor2.setBetrag(Math.sqrt(vektor2.x * vektor2.x + vektor2.y * vektor2.y));
-		vektor2.setWinkel(winkel.addieren(v.winkel));
+		vektor2.setWinkel(winkel.addieren(v.getWinkel()));
 		return vektor2;
 	}
+
 	public double skalarprodukt(Vektor v){
 		return (this.x * v.x) + (this.y * v.y);
 	}
