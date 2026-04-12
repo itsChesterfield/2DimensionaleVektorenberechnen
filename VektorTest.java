@@ -52,14 +52,7 @@ public class VektorTest {
 		Vektor karli3 = new Vektor(4321.21, karli2);
 		System.out.println(karli3.toString());
 	}
-	/**
-	 * Überprüft ob man mit null Länge festlegen kann.
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void konstruktorSecondSadFallNullLaenge(){
 
-	}
 	/**
 	 * Überprüft ob man mit null Winkel initialisieren kann
 	 * Erwartet: Nein.
