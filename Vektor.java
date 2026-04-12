@@ -95,7 +95,10 @@ public class Vektor {
 		return winkel;
 	}
 
-	public Vektor addieren(Vektor v){
+	public Vektor addieren(Vektor v)throws NullPointerException{
+		if(v == null || this == null){
+			throw new NullPointerException("Keiner der Vektoren darf null sein !");
+		}
 		Vektor vektor2 = new Vektor(this.x + v.x, this.y + v.y);
 		vektor2.setBetrag(Math.sqrt(vektor2.x * vektor2.x + vektor2.y * vektor2.y));
 		vektor2.setWinkel(winkel.addieren(v.getWinkel()));

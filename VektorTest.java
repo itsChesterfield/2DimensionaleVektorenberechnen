@@ -54,32 +54,6 @@ public class VektorTest {
 	}
 
 	/**
-	 * Überprüft ob man mit null Winkel initialisieren kann
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void konstruktorSecondSadFallNullWinkel(){
-
-	}
-
-	/**
-	 * Überprüft ob man einen falschen DT verwenden kann.
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void konstruktorSecondSadFallIllegalDT(){
-
-	}
-	/**
-	 * Überprüft ob man falsche Werte annehmen tut..
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void konstruktorSecondSadFallIllegal(){
-
-	}
-
-	/**
 	 * Überprüft Ob Man Objekte ganz normal addieren kann und die richtigen Werte rauskommen
 	 * Erwartet: JA.
 	 */
