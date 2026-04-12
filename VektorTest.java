@@ -22,12 +22,13 @@ public class VektorTest {
 	}
 
 	/**
-	 * Überprüft ob ein Objekt mit null erstellt werden kann.
+	 * Überprüft ob ein Objekt zwei mal mit 0 Initialisiert werden kann.
 	 * Erwartet: Nein.
 	 */
 	@Test
 	public void konstruktorFirstSadFall0(){
-
+		Vektor karli = new Vektor(0, 0);
+		System.out.println(karli.toString());
 	}
 
 	/**
