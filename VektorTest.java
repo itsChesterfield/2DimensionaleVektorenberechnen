@@ -43,12 +43,14 @@ public class VektorTest {
 	}
 
 	/**
-	 * Überprüft ob man mit null ein Objekt erstellen kann (Beide Werte)
+	 * Überprüft ob man ein Winkel null übergeben kann
 	 * Erwartet: Nein.
 	 */
 	@Test
 	public void konstruktorSecondSadFallNull(){
-
+		Winkel karli2 = null;
+		Vektor karli3 = new Vektor(4321.21, karli2);
+		System.out.println(karli3.toString());
 	}
 	/**
 	 * Überprüft ob man mit null Länge festlegen kann.
