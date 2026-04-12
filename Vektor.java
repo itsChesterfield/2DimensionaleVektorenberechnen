@@ -50,7 +50,10 @@ public class Vektor {
 	 * @param betrag
 	 * @param winkel
 	 */
-	public Vektor(double betrag , Winkel winkel){
+	public Vektor(double betrag , Winkel winkel)throws NullPointerException{
+		if(winkel == null){
+			throw new NullPointerException("Winkel Objekt kann nicht null sein!");
+		}
 		this.winkel = winkel;
 		this.x = betrag * Math.cos(winkel.getWinkelImBogenmass());
 		this.y = betrag * Math.sin(winkel.getWinkelImBogenmass());
