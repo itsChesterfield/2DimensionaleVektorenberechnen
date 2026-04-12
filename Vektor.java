@@ -35,11 +35,10 @@ public class Vektor {
 	 * @param y
 	 * @throws IllegalArgumentException damit x und y um zu verhindern das beide mit 0 belegt werden.
 	 */
-	public Vektor(double x, int y)throws IllegalArgumentException{ // Hier muss ich mir einen anderen Weg ausdenken.
+	public Vektor(double x, double y)throws IllegalArgumentException{ // Hier muss ich mir einen anderen Weg ausdenken.
 		if(x == 0 && y == 0){
 			throw new IllegalArgumentException("x und y dürfen nicht gleichzeitig beide 0 sein!");
 		}
-		// Ich sollte hier den anderen Konstruktor aufrufen und länge sowie Winkel berechnen. Damit ich nur einen Konstruktor immer aufrufen muss für alle vier Werte.
 		this.x = x;
 		this.y = y;
 		setBetrag(Math.sqrt(x * x + y * y));
@@ -49,11 +48,10 @@ public class Vektor {
 	/**
 	 * Überladener Konstruktor die Länge des Vektors entgegen nimmt, x und y berechnet und ein neues Winkel Objekt erstellt.
 	 * @param betrag
-	 * @param winkelGrad
-	 * @param winkelGrad angegebener Grad wie der Winkel sein soll.
+	 * @param winkel
 	 */
-	public Vektor(double betrag ,double winkelGrad){
-		this.winkel = new Winkel(winkelGrad);
+	public Vektor(double betrag , Winkel winkel){
+		this.winkel = winkel;
 		this.x = betrag * Math.cos(winkel.getWinkelImBogenmass());
 		this.y = betrag * Math.sin(winkel.getWinkelImBogenmass());
 		this.betrag = betrag;
