@@ -30,16 +30,6 @@ public class VektorTest {
 		Vektor karli = new Vektor(0, 0);
 		System.out.println(karli.toString());
 	}
-
-	/**
-	 * Überprüft ob bestimmte Werte nicht eingesetzt werden können
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void konstruktorFirstSadFallIllegal(){
-
-	}
-
 	/**
 	 * Überprüft ob der Konstruktor mit Länge und Winkel, die gewünschten Werte annehmen tut und ein Objekt erstellt.
 	 * Erwartet: Ja.
