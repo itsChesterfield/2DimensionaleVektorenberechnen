@@ -1,8 +1,10 @@
 package mathematik;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import trigonometrie.Winkel;
 
 public class VektorTest {
+	public static Winkel winkel = new Winkel(231.32);
 	public static Vektor vik = new Vektor(84.21, 21.53);
 	public static Vektor vik2 = new Vektor(32.21, 321.32);
 
@@ -36,7 +38,8 @@ public class VektorTest {
 	 */
 	@Test
 	public void konstruktorSecondNormalFall(){
-
+		Vektor karli = new Vektor(4321.21, winkel);
+		System.out.println(karli.toString());
 	}
 
 	/**
