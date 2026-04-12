@@ -17,7 +17,8 @@ public class VektorTest {
 	 */
 	@Test
 	public void konstruktorFirstNormalFall(){
-
+		Vektor karli = new Vektor(32123.4214, 8219.392);
+		System.out.println(karli.toString());
 	}
 
 	/**
