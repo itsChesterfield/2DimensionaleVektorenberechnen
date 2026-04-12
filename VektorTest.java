@@ -26,7 +26,7 @@ public class VektorTest {
 	 * Erwartet: Nein.
 	 */
 	@Test
-	public void konstruktorFirstSadFallNull(){
+	public void konstruktorFirstSadFall0(){
 
 	}
 
