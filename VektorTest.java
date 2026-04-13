@@ -67,10 +67,12 @@ public class VektorTest {
 	 */
 	@Test
 	public void additionSadFallNull() {
-
+		Vektor karli2 = new Vektor(2321.23, 2231.32);
+		Vektor karli3 = null;
+		System.out.println(karli3.addieren(karli2));
 	}
 	/**
-	 * Überprüft Ob das param Objekt null sein kann.
+	 * Überprüft ob das param Objekt null sein kann.
 	 * Erwartet: Nein.
 	 */
 	@Test

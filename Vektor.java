@@ -96,8 +96,8 @@ public class Vektor {
 	}
 
 	public Vektor addieren(Vektor v)throws NullPointerException{
-		if(v == null || this == null){
-			throw new NullPointerException("Keiner der Vektoren darf null sein !");
+		if(v == null){
+			throw new NullPointerException("Der Vektor in den Parametern darf nicht null sein!");
 		}
 		Vektor vektor2 = new Vektor(this.x + v.x, this.y + v.y);
 		vektor2.setBetrag(Math.sqrt(vektor2.x * vektor2.x + vektor2.y * vektor2.y));
