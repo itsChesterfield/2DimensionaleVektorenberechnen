@@ -98,8 +98,4 @@ public class VektorTest {
 	Vektor vi = null;
 	System.out.println(vi.orthogonalerEinheitsvektor());
 	}
-	@Test
-	public void orthogonalEinheitsvektorSadFallIllegal() {
-
-	}
 }
