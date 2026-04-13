@@ -90,17 +90,13 @@ public class VektorTest {
 		System.out.println(vik.skalarprodukt(karli3));
 	}
 	@Test
-	public void skalarSadFallIllegal() {
-
-	}
-
-	@Test
 	public void orthogonalEinheitsvektorNormallFall() {
 		System.out.println(vik.orthogonalerEinheitsvektor());
 	}
 	@Test
 	public void orthogonalEinheitsvektorSadFallNull() {
-
+	Vektor vi = null;
+	System.out.println(vi.orthogonalerEinheitsvektor());
 	}
 	@Test
 	public void orthogonalEinheitsvektorSadFallIllegal() {
