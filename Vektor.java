@@ -1,5 +1,6 @@
 package mathematik;
 
+import org.junit.jupiter.api.Test;
 import trigonometrie.Winkel;
 
 /**
@@ -104,10 +105,13 @@ public class Vektor {
 		vektor2.setWinkel(winkel.addieren(v.getWinkel()));
 		return vektor2;
 	}
-
-	public double skalarprodukt(Vektor v){
+	public double skalarprodukt(Vektor v)throws NullPointerException{
+		if(v == null){
+			throw new NullPointerException("Übergebene Objekt darf nicht null sein!");
+		}
 		return (this.x * v.x) + (this.y * v.y);
 	}
+
 	public Vektor orthogonalerEinheitsvektor(){
 		double x_orthogonal = this.y / this.betrag;
 		double y_orthogonal = -(this.x / this.betrag);

@@ -72,19 +72,12 @@ public class VektorTest {
 		System.out.println(karli3.addieren(karli2));
 	}
 	/**
-	 * Überprüft ob das param Objekt null sein kann.
-	 * Erwartet: Nein.
-	 */
-	@Test
-	public void additionSadFallIllegalNull2() {
-
-	}
-	/**
 	 * Überprüft ob ein richtig funktionierender Vektor den richtig Skalar Wert zurückgibt.
 	 * Erwartet: Ja.
 	 */
 	@Test
 	public void skalarNormalFall() {
+
 		System.out.println(vik.skalarprodukt(vik2));
 	}
 	/**
@@ -93,7 +86,8 @@ public class VektorTest {
 	 */
 	@Test
 	public void skalarSadFallNull() {
-
+		Vektor karli3 = null;
+		System.out.println(vik.skalarprodukt(karli3));
 	}
 	@Test
 	public void skalarSadFallIllegal() {
